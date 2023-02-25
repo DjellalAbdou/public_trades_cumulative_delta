@@ -1,6 +1,8 @@
 import express, { Response, Request, NextFunction } from 'express';
 import httpStatus from 'http-status';
 
+import tradesRouter from './trades/trades.routes';
+
 import { errorHandler } from '@middlewares/errorsHandler';
 
 const router = express.Router();
@@ -10,6 +12,7 @@ router.get('/status', (req, res) => {
 });
 
 // mount api routes
+router.use('/trade', tradesRouter);
 
 // mount centralised error handler
 router.use(errorHandler);
