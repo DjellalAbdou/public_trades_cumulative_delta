@@ -1,5 +1,5 @@
 import KrakenStrategy from './KrakenStrategy';
-import KucoinStrategy from './kucoinStrategy';
+import KucoinStrategy from './KucoinStrategy';
 
 const exchangeStrategies = {
     kucoin: KucoinStrategy,

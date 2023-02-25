@@ -17,6 +17,7 @@ export default class KucoinStrategy implements IExchangeStrategy {
         this.options = options || { initialDelta: 0 };
     }
 
+    // ! check precision after comma
     async getCumulativeDelta(symbol: string) {
         const res = await externalApi.get(this.config.historyUrl, {
             baseURL: this.config.apiBaseUrl,

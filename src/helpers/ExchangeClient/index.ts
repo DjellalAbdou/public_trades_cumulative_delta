@@ -2,17 +2,21 @@ import exchangeStrategies from './exchangeStrategies';
 import { IExchangeStrategy } from './types';
 
 export default class ExchangeClient {
-    private strategy: IExchangeStrategy;
+    private _strategy: IExchangeStrategy;
 
     constructor(strategy: keyof typeof exchangeStrategies) {
-        this.strategy = new exchangeStrategies[strategy]();
+        this._strategy = new exchangeStrategies[strategy]();
     }
 
     public setStrategy(strategy: keyof typeof exchangeStrategies) {
-        this.strategy = new exchangeStrategies[strategy]();
+        this._strategy = new exchangeStrategies[strategy]();
+    }
+
+    public getStrategy() {
+        return this._strategy;
     }
 
     async getCumulativeDelta(pairSymbol: string): Promise<number> {
-        return await this.strategy.getCumulativeDelta(pairSymbol);
+        return await this._strategy.getCumulativeDelta(pairSymbol);
     }
 }
