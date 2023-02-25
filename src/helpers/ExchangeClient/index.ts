@@ -19,4 +19,8 @@ export default class ExchangeClient {
     async getCumulativeDelta(pairSymbol: string): Promise<number> {
         return await this._strategy.getCumulativeDelta(pairSymbol);
     }
+
+    async getAvailablePairSymbols(): Promise<string[]> {
+        return await this._strategy.getAvailablePairSymbols();
+    }
 }

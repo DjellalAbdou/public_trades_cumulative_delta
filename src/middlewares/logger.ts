@@ -9,7 +9,8 @@ const requestLoggerMiddleware = (logger: any) => {
                 logger.info('request:', {
                     httpMethod: req.method,
                     url: req.originalUrl,
-                    params: req.query || 'none',
+                    query: req.query || 'node',
+                    params: req.params || 'none',
                     statusCode: res.statusCode,
                     date: new Date().toISOString(),
                     dataLatency: new Date().getTime() - start,

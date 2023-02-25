@@ -4,6 +4,7 @@ import httpStatus from 'http-status';
 import tradesRouter from './trades/trades.routes';
 
 import { errorHandler } from '@middlewares/errorsHandler';
+import { validateCumulativeDelta } from './trades/trades.validator';
 
 const router = express.Router();
 
