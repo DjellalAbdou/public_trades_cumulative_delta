@@ -44,6 +44,20 @@ export const staticKucoinHistories = [
         time: 1677358909647000000,
     },
 ];
+export const staticKucoinPairSymbols = [
+    {
+        symbol: 'GALAX-USDT',
+        name: 'GALA-USDT',
+    },
+    {
+        symbol: 'XLM-USDT',
+        name: 'XLM-USDT',
+    },
+    {
+        symbol: 'BTC-USDT',
+        name: 'BTC-USDT',
+    },
+];
 
 // Kraken
 export const staticKrakenSymbol = 'XXBTZUSD';
@@ -54,3 +68,19 @@ export const staticKrakenHistories = [
     ['22803.10000', '1.43000000', 1677357946.2617037, 's', 'l', '', 55913850],
     ['22803.10000', '0.01170000', 1677357946.305923, 'b', 'l', '', 55913851],
 ];
+
+// remove unneded params for clarity
+export const staticKrakenPairSymbols = {
+    ZUSDZJPY: {
+        altname: 'USDJPY',
+    },
+    ZUSDZCAD: {
+        altname: 'USDCAD',
+    },
+    XZECZEUR: {
+        altname: 'ZECEUR',
+    },
+    XXBTZUSD: {
+        altname: 'test XXBTZUSD',
+    },
+};
