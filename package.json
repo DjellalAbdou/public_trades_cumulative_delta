@@ -6,6 +6,8 @@
   "author": "Per5u5",
   "license": "MIT",
   "scripts": {
+    "build": "tsc -p .",
+    "start": "node -r ./tsconfig-paths-bootstrap.js build/app.js",
     "start:dev": "nodemon -r dotenv/config -r tsconfig-paths/register src/app.ts",
     "test": "jest"
   },
